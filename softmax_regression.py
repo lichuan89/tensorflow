@@ -12,8 +12,8 @@ import tensorflow as tf
 import tensorflow.examples.tutorials.mnist as mnist
 
 def test_softmax_regression():
+    ## 训练集用于训练，校验集用于判断训练停止的条件，测试集用于检测训练效果。 
     input = mnist.input_data.read_data_sets("MNIST_data/", one_hot=True) # mnist数据集
-    # 输出mnist训练集测试集以及验证集样本以及标签的规模
     print '训练集数据和标签数量、维度:', input.train.images.shape, input.train.labels.shape
     print '测试集数据和标签数量、维度:', input.test.images.shape, input.test.labels.shape
     print '验证集数据和标签数量、维度:', input.validation.images.shape, input.validation.labels.shape
@@ -54,5 +54,3 @@ def test_softmax_regression():
 if __name__ == "__main__":
     test_softmax_regression()
 
-
-#http://wiki.jikexueyuan.com/project/tensorflow-zh/tutorials/mnist_beginners.html
